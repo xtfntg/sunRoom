@@ -57,14 +57,7 @@ function App() {
           dampingFactor={0.25}
         />
         <Sky sunPosition={[50, 100, 50]} />
-        <Environment
-          background
-          near={1}
-          far={1000}
-          resolution={256}
-          preset="city"
-          intensity={0.01} // 通过减少光照强度来让环境更暗
-        />
+       
         {/* <LogCameraPosition controls={ref} /> */}
 
         <directionalLight position={[10, 10, 10]} intensity={1} castShadow />
