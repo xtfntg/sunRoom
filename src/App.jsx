@@ -7,21 +7,6 @@ import annotations from "./annotations.json";
 import Animate from "./assets/Animate";
 import Buttons from "./assets/Buttons";
 
-/* const LogCameraPosition = ({ controls }) => {
-  useFrame(() => {
-    if (controls.current) {
-      // Log current camera position (camPos)
-      console.log(
-        "Camera Position (camPos):",
-        controls.current.object.position
-      );
-      // Log current target (lookAt)
-      console.log("LookAt Target (lookAt):", controls.current.target);
-    }
-  });
-  return null;
-}; */
-
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [lerping, setLerping] = useState(false);
