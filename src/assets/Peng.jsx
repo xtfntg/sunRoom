@@ -12,10 +12,6 @@ export function Peng({ isPlaying }) {
   // 播放所有动画
   useEffect(() => {
     if (!actions || !animations || Object.keys(actions).length === 0) return;
-
-    console.log("Actions: ", actions); // 检查 actions
-    console.log("Animations: ", animations); // 检查 animations
-    console.log("isPlaying: ", isPlaying); // 检查 isPlaying 状态
     // 停止所有动画
     Object.values(actions).forEach((action) => {
       action.stop(); // 确保每次播放之前停止所有动画
