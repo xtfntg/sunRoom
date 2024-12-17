@@ -21,18 +21,7 @@ export function Peng({ isPlaying }) {
       action.stop(); // 确保每次播放之前停止所有动画
     });
 
-    // 播放所有动画
-    if (isPlaying) {
-      animations.forEach((animation) => {
-        const action = actions[animation.name];
-        if (action) {
-          action.reset().fadeIn(0.5).play(); // 重置并播放动画
-          action.setLoop(THREE.LoopOnce, 1); // 设置为播放一次
-          action.clampWhenFinished = true; // 播放完后停留在最后一帧
-        }
-      });
-    }
-
+  
     // 组件卸载时停止动画
     return () => {
       Object.values(actions).forEach((action) => {
