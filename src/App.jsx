@@ -60,14 +60,7 @@ function App() {
        
         {/* <LogCameraPosition controls={ref} /> */}
 
-        <directionalLight position={[10, 10, 10]} intensity={1} castShadow />
-        <directionalLight
-          position={[10, 10, 10]}
-          intensity={10}
-          castShadow
-          shadow-mapSize-width={2048}
-          shadow-mapSize-height={2048}
-        />
+       
         <Peng isPlaying={isPlaying} />
         <Annotation selected={selected} gotoAnnotation={gotoAnnotation} />
         <Animate
