@@ -34,7 +34,7 @@ function App() {
         onPointerDown={() => setLerping(false)}
         onWheel={() => setLerping(false)}
       >
-        <fog attach="fog" args={["#2b2b2b", 0, 140]} />
+        <fog attach="fog" args={["#7a9abd", 0, 200]} />
         <OrbitControls
           ref={ref}
           target={[8, 2, 3]}
@@ -43,12 +43,19 @@ function App() {
           enableDamping={true}
           dampingFactor={0.25}
         />
-        <Sky sunPosition={[100, 200, 100]} />
-      
+        <Sky sunPosition={[50, 100, 50]} />
+        <Environment files="/Tropical_Beach.hdr" />
+
         {/* <LogCameraPosition controls={ref} /> */}
 
-        <directionalLight position={[10, 10, 10]} intensity={1} castShadow />
-    
+        <directionalLight position={[10, 10, 10]} intensity={3} castShadow />
+        <directionalLight
+          position={[10, 10, 10]}
+          intensity={1}
+          castShadow
+          shadow-mapSize-width={2048}
+          shadow-mapSize-height={2048}
+        />
         <Peng isPlaying={isPlaying} />
         <Annotation selected={selected} gotoAnnotation={gotoAnnotation} />
         <Animate
@@ -67,4 +74,3 @@ function App() {
 }
 
 export default App;
-
